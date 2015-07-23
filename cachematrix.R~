@@ -7,8 +7,6 @@
 ## It also sets the inverse of the matrix calculated in cacheSolve.
 ## It also returns the inverse of the matrix stored in cache in the getinverse() function
 
-## eg: matrix1 <- makeCacheMatrix(matrix(c(4,2,7,6), nrow=2,ncol=2)) ##creates a matrix and caches it
-
 makeCacheMatrix <- function(x = matrix()) {
 	## Sets inv as Null. Thus when a new matrix is created to be cached the cacheSolve() will
 	## resolve that this is a new matrix and find the inverse for this new matrix
@@ -34,8 +32,6 @@ makeCacheMatrix <- function(x = matrix()) {
 ## However, if the matrix and its inverse were already calculated it
 ## simply retrieves the value from cache
 
-## cacheSolve(matrix1) ##returns the inverse of matrix1 and stores the value in cache
-## using the makeCacheMatrix function setinverse()
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
 	inv <- x$getinverse()
